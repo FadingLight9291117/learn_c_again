@@ -1,22 +1,18 @@
 #include<stdio.h>
 
-enum COLOR {RED, YELLOW, GREEN};
+/*********************/
+/*         枚举      */
+/*********************/
+
+enum COLOR {RED, YELLOW, GREEN}; // red是0，yelow是1，green是2
+
+// 声明时可以指定值
+// enum COLOR {RED = 1, YELLOW = 2, GREEN = 3};
 
 int main() {
+    enum COLOR colorName = RED;
+    printf("%d\n", colorName);
 
-        int color = -1;
-        char *colorName = NULL;
-
-        printf("请输入你喜欢的颜色代码：\n");
-        scanf("%d", &color);
-        switch (color) {
-                case RED: colorName = "red"; break;
-                case YELLOW: colorName = "yellow"; break;
-                case GREEN: colorName = "green"; break;
-                default: colorName = "unknow"; break;
-        }
-        printf("你喜欢的颜色是%s\n", colorName);
-
-        return 0;
+    return 0;
 }        
-                             
+
